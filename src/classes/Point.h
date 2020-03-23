@@ -15,6 +15,13 @@ public:
     /** Constructeur */
     Point(int x, int y);
 
+    Point(char unCar);
+
+    Point(int x, int y, char unCar);
+
+    
+     
+
     /** Default destructor */
     virtual ~Point();
 
@@ -65,11 +72,13 @@ public:
     *   Affiche les coordonnées
     */
     void debug();
+	char getChar();
+	void setChar(char val);
 protected:
 
 private:
     int m_x; //!< Member variable "m_x"
     int m_y; //!< Member variable "m_y"
+    char m_caractere;
 };
-
 #endif // POINT_H

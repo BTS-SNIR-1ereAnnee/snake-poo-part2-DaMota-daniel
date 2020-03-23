@@ -55,11 +55,10 @@ void Board::dessinerPlateau()
 
 void Board::dessinerPoint(Point &p){
     wmove(m_boite, p.getY(), p.getX());
-    waddch(m_boite,'*');
+    waddch(m_boite,p.getChar() );
     wrefresh(m_boite);
 
 }
-
 void Board::effacerPoint(Point &p){
     wmove(m_boite, p.getY(), p.getX());
     waddch(m_boite,' ');

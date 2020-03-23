@@ -37,7 +37,9 @@ public:
     * \return true en cas de collision
     */
     bool checkColisionWithBoard();
-
+    
+// Collision avec le serpent lui meme
+    bool checkColisionWithSnake();
 
 private:
     /** tableau de point, corps du serpent*/
