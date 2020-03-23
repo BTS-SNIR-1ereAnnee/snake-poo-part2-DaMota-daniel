@@ -61,13 +61,13 @@ void snake::move(int direction)
     }
 
 }
-
+//colision tableau
 bool snake::checkColisionWithBoard()
 {
     Board *b;
     b = Board::getInstance(); // on recup l'instance de board
     if (serpent[0].getX() == 0 || serpent[0].getX() == b->getXSize()-1) return TRUE;
-    if (serpent[0].getY() == 0 || serpent[0].getY() == b->getYSize()-1) return TRUE;
+    if (serpent[0].getY() == 0 || serpent[0].getY() == b->getYSize()-1) return TRUE;  
     return FALSE;
 }
 
@@ -75,9 +75,11 @@ bool snake::checkColisionWithSnake()
 {
 	for (int i=1;i < longeur ;i++)
 	{
-		if(serpent[0].getX()==serpent[i].getX() && serpent[0].getY()==serpent[i].getY())
+		if(serpent[0].getX()==serpent[i].getX() && serpent[0].getY()==serpent[i].getY())   //colision serpent
 			return TRUE;
 	}
 	
 	return FALSE;
 }
+
+
